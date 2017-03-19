@@ -115,7 +115,7 @@
 					border: none;
 					text-indent: 27px;
 					margin-right: 5px;
-					.fonts (@Open, 15px, #bbbcc0);
+					.fonts (@Open, 15px, normal);
 				}
 				::-webkit-input-placeholder {color:#bbbcc0;}
 				::-moz-placeholder          {color:#bbbcc0;}/* Firefox 19+ */
@@ -139,13 +139,13 @@
 }
 .restList {
 	margin-top: 100vh;
-	background-image: url('../img/popularFood_bg.jpg');
-	background-size: cover;
+	background: @white;
 	padding-bottom: 90px;
 	.sort {
-		padding: 18px 0;
+		padding: 15px 0;
 		background-color: #fcfbf9;
 		border-bottom: 1px solid #e6e6e6;
+		margin-bottom: 28px;
 		h5, option {
 			color: @text;
 			.fonts (@Open, 14px, normal);
@@ -159,8 +159,252 @@
 			select {
 				border: none;
 				background-color: inherit;
-				}
+			}
 		}
+	}
+	.filter {
+		border: 1px solid #f3f2f3;
+		background-color: #fcfbf9;
+		padding: 0;
+		h4 {
+			text-align: center;
+			color: @white;
+			background-color: @hover;
+			margin: 0;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			.fonts (@Open, 14px, bold);
+		}
+		form {
+			p {
+				color: #52555f;
+				border-bottom: 1px solid #f3f2f3;
+				padding: 20px 12px 20px 15px;
+				margin-bottom: 0;
+				span {
+					.fonts (@Open, 10.55px, 700);
+				}
+			}
+			p:last-child {
+				border: none;
+			}
+			p.choose {
+				border-bottom: none;
+			 	span {
+			 		border: 1px solid #ededed;
+			 		display: inline-block;
+			 		width: 100%;
+					input[type="text"] {
+						width: 75%;
+						height: 47px;
+						border-radius: 3px;
+						border: none;
+						text-indent: 15px;
+						margin-right: -2px;
+						.fonts (@Open, 14px, 300);
+						::-webkit-input-placeholder {color:#bbbcc0;}
+						::-moz-placeholder          {color:#bbbcc0;}/* Firefox 19+ */
+						:-moz-placeholder           {color:#bbbcc0;}/* Firefox 18- */
+						:-ms-input-placeholder      {color:#bbbcc0;}	
+					}
+					button {
+						padding: 15px 24px 13px 20px;
+						border: none;
+						background-color: @white;
+						width: 24%;
+						box-shadow: none;
+						border-left: 1px solid #ededed;
+
+					}
+				}
+			}
+			input[type="radio"]  {
+				vertical-align: middle;
+				width: 24px;
+				height: 24px;
+				margin: 0 3px 0 0; 
+			}
+			input[type="radio"]:not(checked) {
+				position: absolute;
+				opacity: 0;
+			}
+
+			input[type="radio"]:not(checked) + label {
+				position: relative;
+				padding: 0 0 0 40px;
+				color: @text;
+				margin-top: 15px;
+				.fonts (@Open, 14px, 300);	
+			}
+			
+			input[type="radio"]:not(checked) + label:before {
+				content: '';
+				position: absolute;
+				top: -3px;
+				left: 0;
+				width: 24px;
+				height: 24px;
+				border: 1px solid #f2f1f3;
+				border-radius: 50%;
+				background: #ffffff;
+			}
+			input[type="radio"]:not(checked) + label:after {
+				content: '';
+				position: absolute;
+				top: -3px;
+				left: 0px; 
+				width: 24px;
+				height: 24px;
+				border: 1px solid #f2f1f3;
+			 	border-radius: 50%;
+				transition: all .2s;
+				opacity: 0;
+				background-image: url('../img/v.png');
+				background-size: cover;
+			}
+			input[type="radio"]:checked + label:after {
+				opacity: 1;    
+			}
+			input[type="radio"]:focus + label:before {
+				box-shadow: 0 0 0 2px rgba(242,241,243,.5);
+			}
+			input[type="checkbox"] {
+				vertical-align: top;
+				margin: 0 3px 0 0;
+				width: 17px;
+				height: 17px;
+			}
+
+			input[type="checkbox"] + label {
+				cursor: pointer;
+				color: @text;
+				margin-top: 20px;
+				.fonts (@Open, 11.5px, normal)
+			}
+			input[type="checkbox"] + label:hover {
+			  color: #e8500e;
+			}
+			
+			input[type="checkbox"]:not(checked) {
+				opacity: 0;
+				position: absolute; 
+			}
+			
+			input[type="checkbox"]:not(checked) + label {
+				padding: 6px 10px;
+				background: #f2f1f3;
+				border-radius: 1px;
+			}
+			
+			input[type="checkbox"]:not(checked) + label:after {
+				content: url('../img/xx.png');
+				padding-left: 10px;
+				color: @text;
+				border-radius: 1px; 
+				background: #f2f1f3;
+			}
+			input[type="checkbox"]:checked + label {
+				background: #e8500e;
+				border-radius: 1px;
+				color: #fff;
+			}
+			
+			input[type="checkbox"]:checked + label:before {
+				background: #e8500e;
+				color: #fff;
+			}
+			
+			input[type="checkbox"]:checked + label:after {
+				content: url('../img/check.png');
+				color: #fff;
+				background: #e8500e;
+			} 
+			p.foodFor {
+				input[type="radio"] + label{
+					margin-right: 25px;
+				}
+			}
+			#amount {
+				border:0;
+				color:#f6931f;
+				font-weight:bold;
+			}
+		}		
+	}
+	.restaurants {
+		.aboutCafe {
+			width: 100%;
+			border-radius: 1px;
+			
+			// background-color: #fcfbf9;
+			// overflow: auto;
+			// width: 76%;
+			// padding: 12px 0 12px 15px;
+			.cafe {
+				margin-top: 12px;
+				float: left;
+				margin-right: 19px;
+				border: 1px solid #ededed;
+			}
+			.restInfo {
+				border: 1px solid #ededed;
+				margin-top: 12px;
+				float: left;
+				h5 {
+					color: @text;
+					.fonts (@Open, 18px, 500);
+					margin: 0;
+					margin-top: 15px;
+				}
+				h6 {
+					color: #748796;
+					.fonts (@Open, 14px, 300);
+					margin: 0;
+					margin-top: 16px;
+				}
+
+				.option {
+					margin-top: 16px;
+					.price,.time {
+						display: inline-block;
+						img {
+							margin-right: 10px;
+						}
+						span {
+							color: #748796;
+							.fonts (@Open, 12px, 300);
+						}
+					}
+					.price {
+						margin-right: 45px;
+					}
+				}
+			}
+			.rating {
+				margin-top: 12px;
+				background-color: @white;
+				text-align: center;
+				width: 24%;
+				padding-top: 15px;
+				border-right: 1px solid #ededed;
+				border-bottom: 1px solid #ededed;
+				border-top: 1px solid #ededed;
+				float: right;
+				h6 {
+					color: #748796;
+					.fonts (@Open, 14px, 300);
+					margin: 0;
+					margin: 15px 0 20px 0;
+				}
+				a {
+					color: @hover;
+					border: 2px dashed @hover;
+					padding: 6px 12px;
+					text-decoration: none;
+					.fonts (@Open, 14px, 300);
+				}
+			}
+		}	
 	}
 }
 
