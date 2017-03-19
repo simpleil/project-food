@@ -89,50 +89,50 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-xs-12 chooseFilter">
+				<div class="col-md-4 col-xs-12 filter">
 					<h4>Search Filters</h4>
 						<form action="#" name="filter">
 							<p class="choose">
-								<input type="text" placeholder="Sarch your favorite food ...">
-								<button type="submit"><img src="img/searchF.png" alt="search"></button>
+								<span>
+									<input type="text" placeholder="Sarch your favorite food ...">
+									<button type="submit"><img src="img/searchF.png" alt="search"></button>
+								</span>
 							</p>
 							<p class="chooseType">
-								<input type="radio" name="dish" value="sandwiches" id="sandwiches"><label for="sandwiches">Sandwiches  94</label><br>
+								<input type="radio" name="dish" value="sandwiches" id="sandwiches" checked> <label for="sandwiches">Sandwiches  94</label><br>
 								<input type="radio" name="dish" value="Vegetarian" id="vegetarian"><label for="vegetarian">Vegetarian  34</label><br>
 								<input type="radio" name="dish" value="Fast Food" id="fastFood"><label for="fastFood">Fast Food </label><br>
 								<input type="radio" name="dish" value="thai" id="thai"><label for="thai">Thai</label><br>
 								<input type="radio" name="dish" value="salads" id="salads"><label for="salads">Salads</label><br>
 						  </p>
 						  <p class="foodFor">
-						  		FOR FOOD<br>
-						  		<input type="radio" name="dishFor" value="delivery" id="sandwiches"><label for="sandwiches">Delivery</label>
+						  		<span>FOR FOOD</span><br>
+						  		<input type="radio" name="dishFor" value="delivery" id="delivery"><label for="delivery">Delivery</label>
 								<input type="radio" name="dishFor" value="pickup" id="pickup"><label for="pickup">Pickup</label><br>
 						  </p>  
 						  <p class="popularTag">
-						  		POPULAR TAGS<br>
-							  	<input type="checkbox"> Grill
-							  	<input type="checkbox"> Chicken
-							  	<input type="checkbox"> Beef
-							  	<input type="checkbox"> Fish
+						  		<span>POPULAR TAGS</span><br>
+							  	<input type="checkbox" name="tags" id="grill" cheked> <label for="grill">Grill</label>
+		                  <input type="checkbox" name="tags" id="chicken"> <label for="chicken">Chicken</label>
+		                  <input type="checkbox" name="tags" id="beef"> <label for="beef"> Beef</label>
+		                  <input type="checkbox" name="tags" id="fish"> <label for="fish"> Fish</label>
 						  </p>
 						  <p class="popularCategor">
-						  		POPULAR CATEGORIES<br>
-							  	<input type="checkbox">Asian
-							  	<input type="checkbox">Grill
-							  	<input type="checkbox">Salads
-						  </p>
-						  <p class="popularCategor">
-						  		POPULAR CATEGORIES<br>
-							  	<input type="checkbox">Asian
-							  	<input type="checkbox">Grill
-							  	<input type="checkbox">Salads
+						  		<span>POPULAR CATEGORIES</span><br>
+							  	<input type="checkbox" name="categories" id="asian"> <label for="asian">Asian</label>
+		                  <input type="checkbox" name="categories" id="gril"><label for="gril">Grill</label>
+		                  <input type="checkbox" name="categories" id="salad"><label for="salad">Salads</label>
 						  </p>
 						  <p class="priceRange">
-						  		PRICE RANGE <br>
+						  		<span>PRICE RANGE</span><br>
+						  		
+								<label for="amount">Price range:</label>
+								<input type="text" id="amount" readonly>
+								<div id="slider-range"></div>
 						  </p>
 
 						  <p class="rating">
-							  	RATING<br>
+							  	<span>RATING</span><br>
 							  	<input type="radio" name="rate" value="five" id="five">
 							  	<label for="five">
 							  		<img src="img/star_full.png" alt="star">
@@ -177,53 +177,37 @@
 						</form>
 				</div>	
 			
-				<div class="col-md-8 col-xs-12 restaurants">
-					<div class="reviews">
-						<div class="cafe"">
-							<img src="img/restaurant.png" alt="cafe">
-							<div>
+				<!-- <div class="col-md-8 col-xs-12 restaurants">
+						<div class="aboutCafe">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
 								<h5>Fabio al porto ristorante</h5>
 								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast</h6>
-								<div>
+								<div class="option">
 									<div class="price">
 										<img src="img/price.png" alt="price">
 										<span>Min $ 10,00</span>
 									</div>
 									<div class="time">
-									<img src="img/time.png" alt="time">
-									<span>30 min</span>
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+							<div class="rating">
+								<div class="stars">
+									<img src="img/star_full.png" alt="star">
+								  		<img src="img/star_full.png" alt="star">
+								  		<img src="img/star_full.png" alt="star">
+								  		<img src="img/star_full.png" alt="star">
+								  		<img src="img/star_empty.png" alt="star">
 								</div>
-						 	 </div>
-							</div>
+								<h6>245 Reviews</h6>
+								<a href="#">View Menu</a>
 						</div>
-						
-						<div class="rating">
-							<div class="stars">
-								<img src="img/star_full.png" alt="star">
-							  		<img src="img/star_full.png" alt="star">
-							  		<img src="img/star_full.png" alt="star">
-							  		<img src="img/star_full.png" alt="star">
-							  		<img src="img/star_empty.png" alt="star">
-							</div>
-							<h6>245 Reviews</h6>
-							<a href="#">View Menu</a>
-						</div>
-						
-					</div>
-					
-
-
-					<div class="restaurant">
-						<div class="left">
-							
-							
-							
-						</div>
-						<div class="right">
-							
-						</div>
-
-					</div>
+				</div> -->
 				</div>
 			</div>
 		</div>
