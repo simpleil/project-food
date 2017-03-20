@@ -16,7 +16,12 @@
 	<!--less-->
 	<link rel="stylesheet/less" type="text/less" href="css/restaurants.less">
 	<script src="js/less.js"></script>
-
+	<!--jquery ui-->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="http:/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
 	<section class="first">
@@ -112,7 +117,7 @@
 						  </p>  
 						  <p class="popularTag">
 						  		<span>POPULAR TAGS</span><br>
-							  	<input type="checkbox" name="tags" id="grill" cheked> <label for="grill">Grill</label>
+							  	<input type="checkbox" name="tags" id="grill"> <label for="grill">Grill</label>
 		                  <input type="checkbox" name="tags" id="chicken"> <label for="chicken">Chicken</label>
 		                  <input type="checkbox" name="tags" id="beef"> <label for="beef"> Beef</label>
 		                  <input type="checkbox" name="tags" id="fish"> <label for="fish"> Fish</label>
@@ -123,14 +128,11 @@
 		                  <input type="checkbox" name="categories" id="gril"><label for="gril">Grill</label>
 		                  <input type="checkbox" name="categories" id="salad"><label for="salad">Salads</label>
 						  </p>
-						  <p class="priceRange">
-						  		<span>PRICE RANGE</span><br>
-						  		
-								<label for="amount">Price range:</label>
+						  <div class="priceRange">
+								<label for="amount">PRICE RANGE</label><br>
 								<input type="text" id="amount" readonly>
 								<div id="slider-range"></div>
-						  </p>
-
+						  </div>
 						  <p class="rating">
 							  	<span>RATING</span><br>
 							  	<input type="radio" name="rate" value="five" id="five">
@@ -176,15 +178,15 @@
 						  </p>
 						</form>
 				</div>	
-			
-				<!-- <div class="col-md-8 col-xs-12 restaurants">
-						<div class="aboutCafe">
+				<div class="col-md-8 col-xs-12 restaurants">
+					<div class="aboutCafe clearfix">
+						<div class="about">
 							<div class="cafe">
 								<img src="img/restaurant.png" alt="cafe">
 							</div>
 							<div class="restInfo">
 								<h5>Fabio al porto ristorante</h5>
-								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast</h6>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
 								<div class="option">
 									<div class="price">
 										<img src="img/price.png" alt="price">
@@ -196,21 +198,364 @@
 									</div>
 						 	 	</div>
 							</div>
-							<div class="rating">
-								<div class="stars">
-									<img src="img/star_full.png" alt="star">
-								  		<img src="img/star_full.png" alt="star">
-								  		<img src="img/star_full.png" alt="star">
-								  		<img src="img/star_full.png" alt="star">
-								  		<img src="img/star_empty.png" alt="star">
-								</div>
-								<h6>245 Reviews</h6>
-								<a href="#">View Menu</a>
 						</div>
-				</div> -->
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a class="views" href="#">245 Reviews</a><br>
+							<a class="menu" href="#">View Menu</a>
+						</div>
+					</div>
+					<div class="aboutCafe clearfix">
+						<div class="about">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
+								<h5>Tratoria due Sarajevo</h5>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
+								<div class="option">
+									<div class="price">
+										<img src="img/price.png" alt="price">
+										<span>Min $ 10,00</span>
+									</div>
+									<div class="time">
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a class="views" href="#">2785 Reviews</a><br>
+							<a class="menu" href="#">View Menu</a>
+						</div>
+					</div>
+					<div class="aboutCafe clearfix">
+						<div class="about">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
+								<h5>Central caffe pizzeria</h5>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
+								<div class="option">
+									<div class="price">
+										<img src="img/price.png" alt="price">
+										<span>Min $ 10,00</span>
+									</div>
+									<div class="time">
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a class="views" href="#" >452 Reviews</a> <br>
+							<a class="menu" href="#">View Menu</a>
+						</div>
+					</div>
+					<div class="aboutCafe clearfix">
+						<div class="about">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
+								<h5>Jagnetina na raznju</h5>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
+								<div class="option">
+									<div class="price">
+										<img src="img/price.png" alt="price">
+										<span>Min $ 10,00</span>
+									</div>
+									<div class="time">
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a class="views" href="#">452 Reviews</a><br>
+							<a class="menu" href="#">View Menu</a>
+						</div>
+					</div>
+					<div class="aboutCafe clearfix">
+						<div class="about">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
+								<h5>Jagnetina na raznju</h5>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
+								<div class="option">
+									<div class="price">
+										<img src="img/price.png" alt="price">
+										<span>Min $ 10,00</span>
+									</div>
+									<div class="time">
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a href="#" class="views">452 Reviews</a><br>
+							<a href="#" class="menu">View Menu</a>
+						</div>
+					</div>
+					<div class="aboutCafe clearfix">
+						<div class="about">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
+								<h5>Fabio al porto ristorante</h5>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
+								<div class="option">
+									<div class="price">
+										<img src="img/price.png" alt="price">
+										<span>Min $ 10,00</span>
+									</div>
+									<div class="time">
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a href="#" class="views">245 Reviews</a><br>
+							<a href="#" class="menu">View Menu</a>
+						</div>
+					</div>
+					<div class="aboutCafe clearfix">
+						<div class="about">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
+								<h5>Tratoria due Sarajevo</h5>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
+								<div class="option">
+									<div class="price">
+										<img src="img/price.png" alt="price">
+										<span>Min $ 10,00</span>
+									</div>
+									<div class="time">
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a href="#" class="views">2785 Reviews</a><br>
+							<a href="#" class="menu">View Menu</a>
+						</div>
+					</div>
+					<div class="aboutCafe clearfix">
+						<div class="about">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
+								<h5>Central caffe pizzeria</h5>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
+								<div class="option">
+									<div class="price">
+										<img src="img/price.png" alt="price">
+										<span>Min $ 10,00</span>
+									</div>
+									<div class="time">
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a href="#" class="views">452 Reviews</a><br>
+							<a href="#" class="menu">View Menu</a>
+						</div>
+					</div>
+					<div class="aboutCafe clearfix">
+						<div class="about">
+							<div class="cafe">
+								<img src="img/restaurant.png" alt="cafe">
+							</div>
+							<div class="restInfo">
+								<h5>Jagnetina na raznju</h5>
+								<h6>Burgers, American, Sandwiches, Fast Food, BBQ,Breakfast </h6>
+								<div class="option">
+									<div class="price">
+										<img src="img/price.png" alt="price">
+										<span>Min $ 10,00</span>
+									</div>
+									<div class="time">
+										<img src="img/time.png" alt="time">
+										<span>30 min</span>
+									</div>
+						 	 	</div>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="stars">
+								<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_full.png" alt="star">
+							  		<img src="img/star_empty.png" alt="star">
+							</div>
+							<a href="#" class="views">452 Reviews</a><br>
+							<a href="#" class="menu">View Menu</a>
+						</div>
+					</div>
+					<nav>
+					  	<ul class="pagination">
+						   <li><a href="#">1</a></li>
+						   <li><a href="#">2</a></li>
+						   <li><a href="#">3</a></li>
+						   <li><a href="#">4</a></li>
+						   <li><a href="#">5</a></li>
+					   </ul>
+					</nav>
 				</div>
 			</div>
 		</div>
 	</section>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-12">
+					<h4><span>Food</span>pickly</h4>
+					<h6 class="main">Order Delivery &amp; Take-Out </h6>
+				</div>
+				<div class="col-md-2 col-xs-12">
+					<h5>About Us</h5>
+					<ul class="main">
+						<li><a href="#">About us</a></li>
+						<li><a href="#">History</a></li>
+						<li><a href="#">Our Team</a></li>
+						<li><a href="#">We are hiring</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-xs-12">
+					<h5>How it Works</h5>
+					<ul class="main">
+						<li><a href="#">Enter your location</a></li>
+						<li><a href="#">Choose restaurant</a></li>
+						<li><a href="#">Choose meal</a></li>
+						<li><a href="#">Pay via credit card</a></li>
+						<li><a href="#">Wait for delivery</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-xs-12">
+					<h5>Pages</h5>
+					<ul class="main">
+						<li><a href="#">Search results page</a></li>
+						<li><a href="#">User Sing Up Page</a></li>
+						<li><a href="#">Pricing page</a></li>
+						<li><a href="#">Make order</a></li>
+						<li><a href="#">Add to cart</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-12">
+					<h5>Popular locations</h5>
+					<ul class="main left">
+						<li><a href="#">Sarajevo</a></li>
+						<li><a href="#">Tuzla</a></li>
+						<li><a href="#">Zagreb</a></li>
+						<li><a href="#">Beograd</a></li>
+						<li><a href="#">Gradacac</a></li>
+					</ul>
+					<ul class="main">
+						<li><a href="#">Sarajevo</a></li>
+						<li><a href="#">Tuzla</a></li>
+						<li><a href="#">Zagreb</a></li>
+						<li><a href="#">Beograd</a></li>
+						<li><a href="#">Gradacac</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-12">
+					<h5>Payment Options</h5>
+					<a href="#"><img src="img/paypal.png" alt="payment"></a>
+					<a href="#"><img src="img/mastercard.png" alt="payment"></a>
+					<a href="#"><img src="img/visa.png" alt="payment"></a>
+					<a href="#"><img src="img/stripe.png" alt="payment"></a>
+					<a href="#"><img src="img/bitcoin.png" alt="payment"></a>
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<h5>Address</h5>
+					<p class="main">Concept design of oline food order and deliveye,planned as restaurant directory</p>
+					<div class="special">
+						<span>Phone:   </span><a href="#">080 000012 222</a>
+					</div>
+				</div>
+				<div class="col-md-5 col-xs-12">
+					<h5>Addition informations</h5>
+					<p class="main">Join the thousands of other restaurants who benefit from having their menus on TakeOff</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
