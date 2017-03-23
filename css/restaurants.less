@@ -97,7 +97,6 @@
 				color: @white;
 				letter-spacing: 4px;
 				.fonts (@Roboto, 42px, normal);
-				
 			}
 			p {
 				color: @white;
@@ -376,19 +375,19 @@
 			border-radius: 1px;
 			border: 1px solid #ededed;
 			margin-top: 27px;
-			.about { 
+				.about { 
 				float: left;
 				background-color: #fcfbf9;
 				max-width: 570px;
 				width: 100%;
-				border-right: 1px solid #ededed;
+				border-right: 1px solid #ededed; 
 				.cafe {
 					float: left;
 					padding: 12px 19px 10px 15px;
 				}
 				.restInfo {
 					float: left;
-					padding: 15px 49px 15px 15px;	
+					padding: 15px 15px 15px 15px;	
 					h5 {
 						color: @text;
 						margin: 0;
@@ -418,17 +417,14 @@
 							margin-right: 45px;
 						}
 					}
-				}
+				} 
 			}
 			.rating {
 				background-color: @white;
 				text-align: center;
 				padding: 19px 0px 10px 15px;
-				h6 {
-					color: #748796;
-					margin: 0;
-					margin: 15px 0 20px 0;
-					.fonts (@Open, 14px, 300);
+				.stars {
+					min-width: 100px;
 				}
 				.menu {
 					display: inline-block;
@@ -540,7 +536,7 @@ footer {
 
 @media screen and (max-width:479px) {
 	.first {
-		position: static;
+		position: static !important;
 		text-align: center;
 		.chooseSteps {
 			.step {
@@ -550,26 +546,54 @@ footer {
 		}
 		.search {
 			.searchFood {
-				margin-top: 35px;
-				padding-bottom: 35px;
+				margin-top: 35px !important;
+				padding-bottom: 0;
 				h3 {
 					letter-spacing: 0;
 					margin-bottom: 23px;
-					font-size: 38px;
+					font-size: 34px;
 				}
-				p{
+				p {
 					letter-spacing: 0px;
 					margin-bottom: 30px;
 				}
 				form button {
 					margin-top: 15px;
+					}
+			}
+		}
+	}
+	.restList {
+	margin-top: 0px;
+	margin-bottom: 0px;
+		.sort {
+			.left {
+				float: none;
+			}
+			.right {
+				float: none;
+			}	
+		}
+		.filter {
+			padding: 15px;
+		}
+		.restaurants {
+			margin-top: 15px;
+			.aboutCafe {
+				.about {
+					border-right: none;
+					.restInfo {
+						padding-right: 15px;
+					}
+				}
+				.rating {
+					text-align: left;
+					background-color: #fcfbf9;;
 				}
 			}
 		}
 	}
-	.popularFood {
-		margin-top: 0;
-	}
+
 	footer {
 		text-align: center;
 		.row:last-child {
@@ -587,7 +611,7 @@ footer {
 	}
 }
 
-@media screen and (min-width:480px) and (max-width:991px) {
+@media screen and (min-width:480px) and (max-width:778px) {
 	.first {
 		position: static;
 		text-align: center;
@@ -599,25 +623,33 @@ footer {
 				text-align: left;
 			 }
 		}
-		.search {
-			.searchFood {
-				h3 {
-					letter-spacing: 0;
-					margin-bottom: 23px;
+	}
+		.restList {
+			margin-top: 0px;
+			margin-bottom: 0px;
+		
+		.filter {
+			padding: 15px;
+		}
+		.restaurants {
+			margin-top: 15px;
+			.aboutCafe {
+				.about {
+					border-right: none;
+					.restInfo {
+						padding-right: 15px;
+					}
 				}
-				p {
-					letter-spacing: 0px;
-					margin-bottom: 30px;
-				}
-				form button {
-					margin-top: 15px;
+				.rating {
+					background-color: #fcfbf9;
+					.stars {
+						padding: 15px;
+					}
 				}
 			}
 		}
-	} 
-	.popularFood {
-		margin-top: 0;
 	}
+		
 	footer {
 		text-align: center;
 		.row:last-child {
@@ -631,6 +663,24 @@ footer {
 		} 
 		.row:last-child h5 {
 			margin-top: 15px;
+		}
+	}
+}
+ @media screen and (min-width:992px) and (max-width:1199px) {
+.restList {
+	.restaurants {
+
+		.aboutCafe {
+			float: none !important;
+			.about {
+				border: none !important;
+				border-right: none !important;
+			}
+			.rating {
+				float: none;
+				text-align: left;
+				
+			}	
 		}
 	}
 }
